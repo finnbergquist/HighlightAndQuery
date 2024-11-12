@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OpenAI Text Context Settings</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>OpenAI Text Context</h1>
+    
+    <div class="section">
+      <h2>API Configuration</h2>
+      <div class="input-group">
+        <label for="apiKey">OpenAI API Key</label>
+        <input type="password" id="apiKey" placeholder="sk-...">
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>System Prompt</h2>
+      <div class="input-group">
+        <label for="systemPrompt">Custom System Prompt</label>
+        <textarea id="systemPrompt" rows="3">You are a helpful assistant providing context and insights about the selected text. Analyze the text and provide a concise but informative response.</textarea>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Keyboard Shortcuts</h2>
+      <div class="shortcut-info">
+        <p>Current shortcut: <span class="keyboard-shortcut">⌘ + ⇧ + 1</span></p>
+        <p class="hint">To modify shortcuts, visit Chrome's keyboard shortcuts page at chrome://extensions/shortcuts</p>
+      </div>
+    </div>
+
+    <div class="button-group">
+      <button id="saveButton">Save Settings</button>
+    </div>
+
+    <div id="status" class="status"></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

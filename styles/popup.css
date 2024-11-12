@@ -1,0 +1,85 @@
+:root {
+  --primary-color: #10a37f;
+  --background-color: #ffffff;
+  --text-color: #353740;
+  --border-color: #e5e5e5;
+}
+
+body {
+  width: 400px;
+  margin: 0;
+  padding: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+h1 {
+  font-size: 20px;
+  margin: 0 0 16px;
+  color: var(--primary-color);
+}
+
+h2 {
+  font-size: 16px;
+  margin: 0 0 8px;
+}
+
+.settings-section {
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+input, textarea {
+  padding: 8px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.shortcut-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.key-combo {
+  background: #f7f7f8;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+.save-button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.save-button:hover {
+  background-color: #0e8e6d;
+}
+
+.status {
+  text-align: center;
+  min-height: 20px;
+  color: var(--primary-color);
+}

@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "OpenAI Text Context",
+  "version": "1.0.0",
+  "description": "Get AI-powered insights for selected text using OpenAI",
+  "host_permissions": ["<all_urls>"],
+  "permissions": [
+    "storage",
+    "contextMenus",
+    "commands",
+    "scripting",
+    "activeTab"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "assets/icon16.svg",
+      "48": "assets/icon48.svg",
+      "128": "assets/icon128.svg"
+    }
+  },
+  "icons": {
+    "16": "assets/icon16.svg",
+    "48": "assets/icon48.svg",
+    "128": "assets/icon128.svg"
+  },
+  "background": {
+    "service_worker": "scripts/background.js",
+    "type": "module"
+  },
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "css": ["styles/content.css"],
+    "js": ["scripts/content.js"]
+  }],
+  "commands": {
+    "analyze-text": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+1",
+        "mac": "Command+Shift+1"
+      },
+      "description": "Analyze selected text"
+    }
+  }
+}
