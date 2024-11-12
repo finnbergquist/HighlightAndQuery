@@ -20,8 +20,8 @@ A Chrome extension that enhances text selection capabilities through OpenAI API 
 
 1. Clone this repository
 ```bash
-git clone [repository-url]
-cd openai-text-context
+git clone https://github.com/finnbergquist/HighlightAndQuery
+cd HighlightAndQuery
 ```
 
 2. Open Chrome and navigate to `chrome://extensions/`
